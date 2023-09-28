@@ -1,10 +1,12 @@
+// pair coded with github.com/cknowles90 
+
 const request = require("request");
 
 const fetchBreedDescription = (breedName, callback) => {
   const apiURL = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
   
   request(apiURL, (error, response, body) => {
-    
+
     if (error) {
       callback(error);
       return;
